@@ -4,485 +4,425 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#3156d8" />
-  <meta name="description" content="Planora by DesignLab — an account-based social media content planner." />
-  <title>Planora — Social Media Planner</title>
+  <meta name="description" content="Planora is a focused social media content planner for creators, small businesses, and growing teams. Plan, organize, and move content with clarity." />
+  <meta name="keywords" content="social media planner, content calendar, content planning, social media calendar, Planora, DesignLab Creative Studio" />
+  <meta name="author" content="DesignLab Creative Studio" />
+  <meta name="robots" content="index, follow" />
 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Planora — Social Media Planning, Simplified" />
+  <meta property="og:description" content="Turn scattered content ideas into an organized, actionable publishing calendar." />
+  <meta property="og:url" content="https://planora.madebydesignlab.com/" />
+  <meta property="og:site_name" content="Planora" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Planora — Social Media Planning, Simplified" />
+  <meta name="twitter:description" content="A clearer way to plan, organize, and schedule your social content." />
+
+  <link rel="canonical" href="https://planora.madebydesignlab.com/" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+
+  <title>Planora — Social Media Planning, Simplified</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Planora",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "A social media content planner for organizing ideas, schedules, captions, and publishing workflows.",
+    "url": "https://planora.madebydesignlab.com/",
+    "creator": {
+      "@type": "Organization",
+      "name": "DesignLab Creative Studio",
+      "url": "https://madebydesignlab.com/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PHP",
+      "description": "Free public beta access"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div id="bootScreen" class="boot-screen">
-    <div class="boot-mark">P</div>
-    <p>Preparing Planora…</p>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <section id="authScreen" class="auth-screen hidden" aria-label="Planora account access">
-    <div class="auth-brand-panel">
-      <div class="auth-brand-content">
-        <div class="brand-lockup brand-lockup-light">
-          <div class="brand-symbol">P</div>
-          <div>
-            <p class="brand-kicker">DesignLab presents</p>
-            <h1>Planora</h1>
-          </div>
-        </div>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="./" aria-label="Planora home">
+        <span class="brand-mark">P</span>
+        <span>
+          <strong>Planora</strong>
+          <small>by DesignLab</small>
+        </span>
+      </a>
 
-        <div class="auth-copy">
-          <p class="eyebrow eyebrow-light">Social media planning, simplified</p>
-          <h2>Plan smarter.<br />Publish with clarity.</h2>
-          <p>Organize content, move posts across your calendar, and keep every social page in one focused workspace.</p>
-        </div>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#workflow">How it works</a>
+        <a href="#plans">Plans</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-        <div class="auth-feature-grid">
-          <div><strong>Monthly + weekly</strong><span>See the big picture or focus on the next seven days.</span></div>
-          <div><strong>Realtime sync</strong><span>Changes appear across open sessions automatically.</span></div>
-          <div><strong>Drag and drop</strong><span>Reschedule content without reopening every post.</span></div>
-          <div><strong>Secure accounts</strong><span>Your workspace data is protected by Supabase RLS.</span></div>
-        </div>
-      </div>
-      <p class="auth-brand-footer">Planora v<span data-app-version>0.1.0</span> · Built by DesignLab Creative Studio</p>
+      <a class="button button-small button-dark" href="login.html">Open Planora <span>↗</span></a>
     </div>
+  </header>
 
-    <div class="auth-form-panel">
-      <div class="auth-card">
-        <div class="auth-mobile-brand brand-lockup">
-          <div class="brand-symbol">P</div>
-          <div>
-            <p class="brand-kicker">DesignLab presents</p>
-            <h1>Planora</h1>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow-pill"><span></span> Public beta · Built for clearer content planning</div>
+          <h1>Turn scattered ideas into a <em>clear content plan.</em></h1>
+          <p class="hero-lead">
+            Planora gives creators, social media managers, and growing brands one focused workspace for content ideas, captions, schedules, and publishing progress.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="login.html">Start planning free <span>→</span></a>
+            <a class="button button-ghost" href="#features">Explore features</a>
+          </div>
+
+          <div class="hero-trust">
+            <div><strong>Monthly + weekly</strong><span>Switch views anytime</span></div>
+            <div><strong>Realtime sync</strong><span>Stay updated across sessions</span></div>
+            <div><strong>Free beta</strong><span>Start with no payment</span></div>
           </div>
         </div>
 
-        <div id="authDefaultView">
-          <div class="auth-tabs" role="tablist" aria-label="Account options">
-            <button id="signInTab" class="auth-tab active" type="button" role="tab">Sign in</button>
-            <button id="registerTab" class="auth-tab" type="button" role="tab">Create account</button>
-          </div>
+        <div class="product-stage" aria-label="Planora interface preview">
+          <div class="floating-chip chip-one"><span class="chip-dot idea"></span> New idea saved</div>
+          <div class="floating-chip chip-two"><span>↻</span> Realtime sync</div>
 
-          <form id="signInForm" class="auth-form">
-            <div class="auth-heading">
-              <p class="eyebrow">Welcome back</p>
-              <h2>Continue to your planner</h2>
-              <p>Sign in using the email connected to your Planora workspace.</p>
+          <div class="app-window">
+            <div class="window-bar">
+              <div class="traffic"><i></i><i></i><i></i></div>
+              <div class="window-title">Planora · July 2026</div>
+              <div class="window-avatar">J</div>
             </div>
 
-            <label>
-              Email address
-              <input id="signInEmail" type="email" autocomplete="email" placeholder="you@example.com" required />
-            </label>
+            <div class="window-body">
+              <aside class="mock-sidebar">
+                <div class="mock-brand"><span>P</span><strong>Planora</strong></div>
+                <div class="mock-workspace">
+                  <small>WORKSPACE</small>
+                  <strong>DesignLab Studio</strong>
+                </div>
+                <div class="mock-nav active"><i></i> All content</div>
+                <div class="mock-nav"><i></i> DesignLab</div>
+                <div class="mock-nav"><i></i> Planora</div>
+                <div class="mock-nav"><i></i> Client page</div>
+                <div class="mock-upgrade">✦ <span><strong>Premium</strong><small>Coming soon</small></span></div>
+              </aside>
 
-            <label>
-              Password
-              <span class="password-field">
-                <input id="signInPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required />
-                <button class="password-toggle" type="button" data-password-target="signInPassword" aria-label="Show password">Show</button>
-              </span>
-            </label>
+              <div class="mock-main">
+                <div class="mock-heading">
+                  <div><small>MONTHLY CALENDAR</small><strong>July 2026</strong></div>
+                  <div class="mock-toggle"><span class="active">Month</span><span>Week</span></div>
+                </div>
 
-            <div class="form-inline-row">
-              <label class="check-label"><input id="rememberEmail" type="checkbox" /> Remember email</label>
-              <button id="forgotPasswordButton" class="text-button" type="button">Forgot password?</button>
+                <div class="mock-stats">
+                  <div><small>IDEAS</small><strong>12</strong></div>
+                  <div><small>CREATED</small><strong>8</strong></div>
+                  <div><small>SCHEDULED</small><strong>16</strong></div>
+                  <div><small>POSTED</small><strong>24</strong></div>
+                </div>
+
+                <div class="calendar-labels">
+                  <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+                </div>
+
+                <div class="mock-calendar">
+                  <div class="day muted"><b>28</b></div>
+                  <div class="day muted"><b>29</b></div>
+                  <div class="day muted"><b>30</b></div>
+                  <div class="day"><b>1</b><div class="post idea-post">Campaign concept</div></div>
+                  <div class="day"><b>2</b></div>
+                  <div class="day"><b>3</b><div class="post scheduled-post">Branding tip</div></div>
+                  <div class="day"><b>4</b></div>
+                  <div class="day"><b>5</b></div>
+                  <div class="day"><b>6</b><div class="post created-post">Service feature</div></div>
+                  <div class="day"><b>7</b></div>
+                  <div class="day today"><b>8</b><div class="post posted-post">Client result</div></div>
+                  <div class="day"><b>9</b></div>
+                  <div class="day"><b>10</b><div class="post scheduled-post">Planora update</div></div>
+                  <div class="day"><b>11</b></div>
+                  <div class="day"><b>12</b></div>
+                  <div class="day"><b>13</b></div>
+                  <div class="day"><b>14</b><div class="post idea-post">Carousel outline</div></div>
+                  <div class="day"><b>15</b></div>
+                  <div class="day"><b>16</b></div>
+                  <div class="day"><b>17</b><div class="post created-post">Behind the scenes</div></div>
+                  <div class="day"><b>18</b></div>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <button id="signInButton" class="auth-primary-button" type="submit">Sign in</button>
-          </form>
+          <div class="floating-card">
+            <small>POST STATUS</small>
+            <strong>Ready to publish</strong>
+            <div><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <form id="registerForm" class="auth-form hidden">
-            <div class="auth-heading">
-              <p class="eyebrow">Start planning</p>
-              <h2>Create your Planora account</h2>
-              <p>Your first workspace and social page will be created automatically.</p>
+    <section class="logo-strip" aria-label="Planora benefits">
+      <div class="shell logo-strip-inner">
+        <span>FOR CREATORS</span>
+        <i></i>
+        <span>FOR SMALL BUSINESSES</span>
+        <i></i>
+        <span>FOR SOCIAL MEDIA MANAGERS</span>
+        <i></i>
+        <span>FOR CREATIVE TEAMS</span>
+      </div>
+    </section>
+
+    <section class="section problem-section">
+      <div class="shell split-heading">
+        <div>
+          <p class="section-kicker">Less scattered. More intentional.</p>
+          <h2>Your content process deserves more than disconnected notes and spreadsheets.</h2>
+        </div>
+        <p>
+          Planora brings the essential parts of content planning together so you can see what is coming, what still needs work, and what has already been published.
+        </p>
+      </div>
+
+      <div class="shell outcome-grid">
+        <article>
+          <span>01</span>
+          <h3>Capture the idea</h3>
+          <p>Save content titles, categories, captions, platforms, and internal production notes in one place.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Build the schedule</h3>
+          <p>Assign dates and times, then move posts through the calendar without rebuilding your plan.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Track the progress</h3>
+          <p>Move content from Idea to Created, Scheduled, and Posted so the next action is always clear.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="section feature-section">
+      <div class="shell section-heading centered">
+        <p class="section-kicker">Everything you need to plan clearly</p>
+        <h2>A practical content calendar without the unnecessary complexity.</h2>
+        <p>Planora focuses on the workflow social media teams use every day.</p>
+      </div>
+
+      <div class="shell feature-grid">
+        <article class="feature-card feature-card-wide blue-card">
+          <div class="feature-copy">
+            <span class="feature-icon">▦</span>
+            <p class="feature-label">CALENDAR VIEWS</p>
+            <h3>Zoom out for the month. Focus in for the week.</h3>
+            <p>Switch between monthly and weekly planning without losing your filters, dates, or active social page.</p>
+          </div>
+          <div class="mini-calendar">
+            <div class="mini-calendar-top"><strong>July</strong><span>Month&nbsp;&nbsp; Week</span></div>
+            <div class="mini-days"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+            <div class="mini-grid">
+              <i></i><i></i><i></i><i class="with-post"></i><i></i><i class="with-post purple"></i><i></i>
+              <i></i><i class="with-post green"></i><i></i><i></i><i></i><i class="with-post"></i><i></i>
+              <i></i><i></i><i class="with-post purple"></i><i></i><i></i><i></i><i></i>
             </div>
-
-            <label>
-              Full name
-              <input id="registerName" type="text" autocomplete="name" placeholder="Your full name" maxlength="100" required />
-            </label>
-
-            <label>
-              Email address
-              <input id="registerEmail" type="email" autocomplete="email" placeholder="you@example.com" required />
-            </label>
-
-            <label>
-              Password
-              <span class="password-field">
-                <input id="registerPassword" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required />
-                <button class="password-toggle" type="button" data-password-target="registerPassword" aria-label="Show password">Show</button>
-              </span>
-            </label>
-
-            <div class="password-meter" aria-hidden="true"><span id="passwordMeterFill"></span></div>
-            <p id="passwordHint" class="field-hint">Use at least 8 characters with a mix of letters and numbers.</p>
-
-            <label class="check-label terms-check">
-              <input id="acceptTerms" type="checkbox" required />
-              <span>I agree to the basic account and data-use terms for this beta.</span>
-            </label>
-
-            <button id="registerButton" class="auth-primary-button" type="submit">Create free account</button>
-          </form>
-        </div>
-
-        <div id="authMessageView" class="auth-message-view hidden">
-          <div id="authMessageIcon" class="message-icon">✓</div>
-          <p id="authMessageEyebrow" class="eyebrow">Check your inbox</p>
-          <h2 id="authMessageTitle">Confirm your email</h2>
-          <p id="authMessageBody">We sent a confirmation link to your email address.</p>
-          <button id="backToSignInButton" class="auth-primary-button" type="button">Back to sign in</button>
-        </div>
-
-        <form id="forgotPasswordForm" class="auth-form hidden">
-          <div class="auth-heading">
-            <p class="eyebrow">Account recovery</p>
-            <h2>Reset your password</h2>
-            <p>Enter your account email and we’ll send you a secure reset link.</p>
           </div>
-          <label>
-            Email address
-            <input id="forgotEmail" type="email" autocomplete="email" placeholder="you@example.com" required />
-          </label>
-          <button id="sendResetButton" class="auth-primary-button" type="submit">Send reset link</button>
-          <button id="cancelForgotButton" class="secondary-wide-button" type="button">Back to sign in</button>
-        </form>
+        </article>
 
-        <form id="recoveryForm" class="auth-form hidden">
-          <div class="auth-heading">
-            <p class="eyebrow">Choose a new password</p>
-            <h2>Secure your account</h2>
-            <p>Enter a new password for your Planora account.</p>
+        <article class="feature-card">
+          <span class="feature-icon">↔</span>
+          <p class="feature-label">DRAG AND DROP</p>
+          <h3>Reschedule without reopening every post.</h3>
+          <p>Move a content item to another day directly from the calendar and keep your workflow moving.</p>
+          <div class="drag-demo">
+            <span>Campaign teaser</span><b>→</b><div>18</div>
           </div>
-          <label>
-            New password
-            <span class="password-field">
-              <input id="recoveryPassword" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required />
-              <button class="password-toggle" type="button" data-password-target="recoveryPassword" aria-label="Show password">Show</button>
-            </span>
-          </label>
-          <label>
-            Confirm new password
-            <input id="recoveryPasswordConfirm" type="password" autocomplete="new-password" minlength="8" placeholder="Repeat your password" required />
-          </label>
-          <button id="updatePasswordButton" class="auth-primary-button" type="submit">Update password</button>
-        </form>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">◉</span>
+          <p class="feature-label">CONTENT STATUS</p>
+          <h3>Know what needs attention at a glance.</h3>
+          <p>Use clear stages for Idea, Created, Scheduled, and Posted content.</p>
+          <div class="status-stack">
+            <span><i class="idea"></i>Idea <b>12</b></span>
+            <span><i class="created"></i>Created <b>8</b></span>
+            <span><i class="scheduled"></i>Scheduled <b>16</b></span>
+            <span><i class="posted"></i>Posted <b>24</b></span>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">◎</span>
+          <p class="feature-label">SOCIAL PAGES</p>
+          <h3>Keep brands and channels organized.</h3>
+          <p>Create separate social pages inside your workspace and filter the calendar by the brand or account you need.</p>
+          <div class="page-pills"><span>DesignLab</span><span>Planora</span><span>Client A</span></div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">↻</span>
+          <p class="feature-label">REALTIME SYNC</p>
+          <h3>See updates across active sessions.</h3>
+          <p>Realtime updates and refresh fallbacks help keep your planner consistent across devices and open tabs.</p>
+          <div class="sync-line"><i></i><span>Workspace updated just now</span></div>
+        </article>
+
+        <article class="feature-card feature-card-wide dark-card">
+          <div class="feature-copy">
+            <span class="feature-icon">⌕</span>
+            <p class="feature-label">SEARCH + FILTERS</p>
+            <h3>Find the content you need without scrolling through everything.</h3>
+            <p>Search titles and drafts, filter by workflow status, and focus on one social page at a time.</p>
+          </div>
+          <div class="search-preview">
+            <div class="search-box">⌕ &nbsp; Search posts…</div>
+            <span>All statuses</span>
+            <div class="search-result"><i></i><div><strong>Planora public beta</strong><small>Scheduled · Facebook</small></div><b>Jul 17</b></div>
+            <div class="search-result"><i class="purple"></i><div><strong>Content planning tip</strong><small>Created · Instagram</small></div><b>Jul 19</b></div>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="appScreen" class="app-screen hidden" aria-label="Planora planner application">
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-top">
-        <div class="brand-lockup">
-          <div class="brand-symbol">P</div>
-          <div>
-            <p class="brand-kicker">DesignLab presents</p>
-            <h1>Planora</h1>
-          </div>
+    <section id="workflow" class="section workflow-section">
+      <div class="shell workflow-grid">
+        <div class="workflow-copy">
+          <p class="section-kicker light">A simpler everyday workflow</p>
+          <h2>From idea to published post—without losing the thread.</h2>
+          <p>Planora keeps the planning layer focused, so you spend less time maintaining the calendar and more time creating useful content.</p>
+          <a class="button button-light" href="login.html">Open your workspace <span>→</span></a>
         </div>
-        <button id="mobileSidebarClose" class="icon-button mobile-only" type="button" aria-label="Close navigation">×</button>
-      </div>
 
-      <div class="workspace-card">
+        <div class="workflow-steps">
+          <article><span>1</span><div><strong>Create your workspace</strong><p>Your starter workspace and first social page are prepared automatically.</p></div></article>
+          <article><span>2</span><div><strong>Add and organize content</strong><p>Enter the title, date, time, platform, caption, notes, and workflow status.</p></div></article>
+          <article><span>3</span><div><strong>Review and adjust</strong><p>Use month or week view, drag posts to new dates, and update the status as work progresses.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="section plans-section">
+      <div class="shell plans-grid">
+        <div class="plans-heading">
+          <p class="section-kicker">Start with the public beta</p>
+          <h2>Plan your content now. Grow into more tools later.</h2>
+          <p>The beta focuses on a reliable personal planning experience. Team and advanced workflow features are being prepared for future releases.</p>
+        </div>
+
+        <article class="plan-card current-plan">
+          <div class="plan-top"><span>PUBLIC BETA</span><b>Available now</b></div>
+          <h3>Planora Free</h3>
+          <p class="price"><strong>₱0</strong><span>during beta</span></p>
+          <ul>
+            <li>Personal account and workspace</li>
+            <li>Monthly and weekly calendars</li>
+            <li>Drag-and-drop rescheduling</li>
+            <li>Content statuses, drafts, and notes</li>
+            <li>Social page organization</li>
+            <li>Realtime workspace updates</li>
+          </ul>
+          <a class="button button-primary button-full" href="login.html">Create free account</a>
+        </article>
+
+        <article class="plan-card future-plan">
+          <div class="plan-top"><span>COMING LATER</span><b>In development</b></div>
+          <h3>Planora Premium</h3>
+          <p class="price"><strong>More</strong><span>for growing teams</span></p>
+          <ul>
+            <li>Additional brands and social pages</li>
+            <li>Team members and workspace roles</li>
+            <li>Review and approval workflows</li>
+            <li>Reusable campaign templates</li>
+            <li>Advanced planning and reporting tools</li>
+          </ul>
+          <span class="button button-disabled button-full">Join after beta</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="shell faq-layout">
         <div>
-          <p class="mini-label">Workspace</p>
-          <h2 id="workspaceName">Loading…</h2>
+          <p class="section-kicker">Frequently asked questions</p>
+          <h2>Good to know before you start.</h2>
+          <p>Planora is actively being developed by DesignLab Creative Studio.</p>
         </div>
-        <span id="planBadge" class="plan-badge free">Free</span>
-      </div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-section-heading">
-          <p class="section-label">Social pages</p>
-          <button id="addPageButton" class="mini-icon-button" type="button" aria-label="Add social page" title="Add social page">+</button>
+        <div class="faq-list">
+          <details open>
+            <summary>Is Planora free?</summary>
+            <p>Planora is currently available as a free public beta. Paid or premium features may be introduced later, with clear notice before any billing is required.</p>
+          </details>
+          <details>
+            <summary>Does Planora publish directly to social media?</summary>
+            <p>Not yet. The current beta is a planning and workflow tool. It helps you organize content, schedules, captions, and status—not automatically publish to social networks.</p>
+          </details>
+          <details>
+            <summary>Can I use it for several brands?</summary>
+            <p>You can organize social pages within your workspace. Expanded multi-brand limits and team controls are planned for Premium.</p>
+          </details>
+          <details>
+            <summary>Is my planner private?</summary>
+            <p>Planora uses account-based access and database row-level security so users can only access records permitted for their account and workspace.</p>
+          </details>
+          <details>
+            <summary>Can features change during the beta?</summary>
+            <p>Yes. Beta features, limits, and interface details may change as the product is tested and improved. Important updates will appear in the in-app changelog.</p>
+          </details>
         </div>
-        <nav id="pageTabs" class="page-tabs" aria-label="Social pages"></nav>
       </div>
+    </section>
 
-      <div class="sidebar-tip">
-        <div class="tip-icon">⌘</div>
+    <section class="final-cta">
+      <div class="shell final-cta-card">
         <div>
-          <strong>Quick keys</strong>
-          <p><kbd>N</kbd> new post · <kbd>R</kbd> refresh · <kbd>W</kbd> week · <kbd>M</kbd> month</p>
+          <p class="section-kicker light">Ready for a clearer content calendar?</p>
+          <h2>Give every idea a place—and every post a next step.</h2>
         </div>
+        <a class="button button-light" href="login.html">Start planning free <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <a class="brand footer-brand" href="./">
+          <span class="brand-mark">P</span>
+          <span><strong>Planora</strong><small>by DesignLab</small></span>
+        </a>
+        <p>A focused social media content planner built by DesignLab Creative Studio.</p>
       </div>
 
-      <div class="sidebar-actions">
-        <button id="upgradeButton" class="upgrade-button" type="button">
-          <span>✦</span>
-          <span><strong>Explore Premium</strong><small>More pages, workflows and tools</small></span>
-        </button>
-        <button id="accountButton" class="account-button" type="button">
-          <span id="accountAvatar" class="account-avatar">U</span>
-          <span><strong id="accountName">Planora User</strong><small id="accountEmail">user@example.com</small></span>
-          <span class="account-chevron">›</span>
-        </button>
+      <div class="footer-links">
+        <div><strong>Product</strong><a href="#features">Features</a><a href="#plans">Plans</a><a href="login.html">Sign in</a></div>
+        <div><strong>Legal</strong><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+        <div><strong>DesignLab</strong><a href="https://madebydesignlab.com/">Made by DesignLab</a><a href="mailto:jannjaravata@gmail.com">Contact</a></div>
       </div>
-    </aside>
-
-    <main class="main-content">
-      <header class="app-header">
-        <div class="header-leading">
-          <button id="mobileSidebarOpen" class="icon-button mobile-only" type="button" aria-label="Open navigation">☰</button>
-          <div>
-            <p id="calendarEyebrow" class="eyebrow">Monthly calendar</p>
-            <h2 id="calendarTitle">Loading…</h2>
-            <p id="activePageLabel" class="header-subtitle">All social pages</p>
-          </div>
-        </div>
-
-        <div class="header-tools">
-          <div class="live-clock" aria-live="polite">
-            <strong id="currentTime">--:--</strong>
-            <span id="currentDate">Loading date…</span>
-          </div>
-
-          <div class="view-toggle" role="group" aria-label="Calendar view">
-            <button id="monthlyViewButton" class="view-button active" type="button">Month</button>
-            <button id="weeklyViewButton" class="view-button" type="button">Week</button>
-          </div>
-        </div>
-      </header>
-
-      <section class="planner-toolbar">
-        <div class="date-controls">
-          <button id="previousPeriodButton" class="toolbar-button" type="button">← Previous</button>
-          <button id="todayButton" class="toolbar-button primary" type="button">Today</button>
-          <button id="nextPeriodButton" class="toolbar-button" type="button">Next →</button>
-        </div>
-
-        <div class="toolbar-right">
-          <label class="search-control">
-            <span>⌕</span>
-            <input id="plannerSearch" type="search" placeholder="Search posts…" autocomplete="off" />
-          </label>
-          <select id="statusFilter" class="filter-select" aria-label="Filter posts by status">
-            <option value="all">All statuses</option>
-            <option value="idea">Idea</option>
-            <option value="created">Created</option>
-            <option value="scheduled">Scheduled</option>
-            <option value="posted">Posted</option>
-          </select>
-          <button id="newPostButton" class="new-post-button" type="button">+ New post</button>
-        </div>
-      </section>
-
-      <section class="stats-row" aria-label="Planner statistics">
-        <article class="stat-card"><p>Ideas</p><h3 id="ideaCount">0</h3><span>Early concepts</span></article>
-        <article class="stat-card"><p>Created</p><h3 id="createdCount">0</h3><span>Assets ready</span></article>
-        <article class="stat-card"><p>Scheduled</p><h3 id="scheduledCount">0</h3><span>Queued content</span></article>
-        <article class="stat-card"><p>Posted</p><h3 id="postedCount">0</h3><span>Published posts</span></article>
-      </section>
-
-      <section class="calendar-panel" aria-live="polite">
-        <div class="weekdays" aria-hidden="true">
-          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-        </div>
-        <div id="calendarGrid" class="calendar-grid"></div>
-        <div id="calendarEmpty" class="calendar-empty hidden">
-          <div class="empty-icon">＋</div>
-          <h3>No posts in this view</h3>
-          <p>Create a post or adjust your filters to populate the planner.</p>
-          <button id="emptyNewPostButton" class="new-post-button" type="button">Create a post</button>
-        </div>
-      </section>
-
-      <footer class="app-footer">
-        <span>Planora by DesignLab</span>
-        <span>Version <strong data-app-version>0.1.0</strong></span>
-        <span id="syncStatus">Preparing sync…</span>
-      </footer>
-    </main>
-
-    <div id="sidebarBackdrop" class="sidebar-backdrop hidden"></div>
-
-    <button id="changelogButton" class="floating-action changelog-action" type="button" aria-label="View changelog" title="View changelog">ⓘ</button>
-    <button id="refreshButton" class="floating-action refresh-action" type="button" aria-label="Refresh planner" title="Refresh planner">↻</button>
-  </section>
-
-  <div id="postModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="postModalTitle">
-    <div class="modal-card modal-card-wide">
-      <div class="modal-header">
-        <div>
-          <p class="eyebrow">Content item</p>
-          <h3 id="postModalTitle">Create post</h3>
-          <p id="postModalDateLabel" class="modal-subtitle">Select a date</p>
-        </div>
-        <button id="closePostModal" class="icon-button" type="button" aria-label="Close">×</button>
-      </div>
-
-      <form id="postForm" class="modal-form">
-        <input id="postId" type="hidden" />
-
-        <label>
-          Post title
-          <input id="postTitle" type="text" maxlength="180" placeholder="Example: 5 branding mistakes to avoid" required />
-        </label>
-
-        <div class="form-grid two-columns">
-          <label>
-            Social page
-            <select id="postPage" required></select>
-          </label>
-          <label>
-            Status
-            <select id="postStatus">
-              <option value="idea">Idea</option>
-              <option value="created">Created</option>
-              <option value="scheduled">Scheduled</option>
-              <option value="posted">Posted</option>
-            </select>
-          </label>
-        </div>
-
-        <div class="form-grid two-columns">
-          <label>
-            Post date
-            <input id="postDate" type="date" required />
-          </label>
-          <label>
-            Posting time
-            <input id="postTime" type="time" step="300" />
-          </label>
-        </div>
-
-        <div class="time-tools" aria-label="Quick time choices">
-          <button class="time-chip" type="button" data-time="09:00">9 AM</button>
-          <button class="time-chip" type="button" data-time="12:00">12 PM</button>
-          <button class="time-chip" type="button" data-time="15:00">3 PM</button>
-          <button class="time-chip" type="button" data-time="18:00">6 PM</button>
-          <button class="time-chip" type="button" data-time="21:00">9 PM</button>
-          <button class="time-chip special" type="button" data-time="now">Now</button>
-          <button class="time-chip subtle" type="button" data-time="">Clear</button>
-        </div>
-
-        <div class="form-grid two-columns">
-          <label>
-            Platform
-            <select id="postPlatform">
-              <option value="Facebook">Facebook</option>
-              <option value="Instagram">Instagram</option>
-              <option value="TikTok">TikTok</option>
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="YouTube">YouTube</option>
-              <option value="Multiple">Multiple platforms</option>
-              <option value="General">General</option>
-            </select>
-          </label>
-          <label>
-            Category
-            <input id="postCategory" type="text" maxlength="80" placeholder="Educational, Promo, Reel…" />
-          </label>
-        </div>
-
-        <label>
-          Caption or content draft
-          <textarea id="postCaption" rows="5" placeholder="Write the hook, caption, or content direction here…"></textarea>
-        </label>
-
-        <label>
-          Internal notes
-          <textarea id="postNotes" rows="3" placeholder="Assets, links, reminders, production notes…"></textarea>
-        </label>
-
-        <div class="modal-actions">
-          <button id="deletePostButton" class="danger-button hidden" type="button">Delete post</button>
-          <div class="modal-actions-right">
-            <button id="cancelPostButton" class="secondary-button" type="button">Cancel</button>
-            <button id="savePostButton" class="primary-button" type="submit">Save post</button>
-          </div>
-        </div>
-      </form>
     </div>
-  </div>
 
-  <div id="pageModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pageModalTitle">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div><p class="eyebrow">Social page</p><h3 id="pageModalTitle">Add a page</h3></div>
-        <button id="closePageModal" class="icon-button" type="button" aria-label="Close">×</button>
-      </div>
-      <form id="pageForm" class="modal-form">
-        <input id="pageId" type="hidden" />
-        <label>Page name<input id="pageName" type="text" maxlength="100" placeholder="DesignLab Creative Studio" required /></label>
-        <label>Primary platform
-          <select id="pagePlatform">
-            <option value="Facebook">Facebook</option>
-            <option value="Instagram">Instagram</option>
-            <option value="TikTok">TikTok</option>
-            <option value="LinkedIn">LinkedIn</option>
-            <option value="YouTube">YouTube</option>
-            <option value="General">General</option>
-          </select>
-        </label>
-        <label>Accent color<input id="pageColor" type="color" value="#3156d8" /></label>
-        <div class="modal-actions">
-          <button id="archivePageButton" class="danger-button hidden" type="button">Archive page</button>
-          <div class="modal-actions-right">
-            <button id="cancelPageButton" class="secondary-button" type="button">Cancel</button>
-            <button id="savePageButton" class="primary-button" type="submit">Save page</button>
-          </div>
-        </div>
-      </form>
+    <div class="shell footer-bottom">
+      <span>© 2026 DesignLab Creative Studio. All rights reserved.</span>
+      <span>Planora public beta · Version 0.2.0</span>
     </div>
-  </div>
-
-  <div id="accountModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div><p class="eyebrow">Account settings</p><h3 id="accountModalTitle">Your Planora account</h3></div>
-        <button id="closeAccountModal" class="icon-button" type="button" aria-label="Close">×</button>
-      </div>
-      <form id="profileForm" class="modal-form">
-        <div class="profile-summary">
-          <span id="profileAvatar" class="profile-avatar">U</span>
-          <div><strong id="profileEmail">user@example.com</strong><span id="profilePlanText">Free plan</span></div>
-        </div>
-        <label>Display name<input id="profileName" type="text" maxlength="100" required /></label>
-        <label>Workspace name<input id="profileWorkspaceName" type="text" maxlength="100" required /></label>
-        <div class="modal-actions split-actions">
-          <button id="signOutButton" class="danger-button subtle-danger" type="button">Sign out</button>
-          <button id="saveProfileButton" class="primary-button" type="submit">Save changes</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div id="premiumModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="premiumModalTitle">
-    <div class="modal-card premium-modal-card">
-      <button id="closePremiumModal" class="icon-button premium-close" type="button" aria-label="Close">×</button>
-      <div class="premium-mark">✦</div>
-      <p class="eyebrow eyebrow-light">Planora Premium</p>
-      <h3 id="premiumModalTitle">Built for growing brands and creative teams.</h3>
-      <p class="premium-intro">The payment flow is coming in the next release. Your account is already structured to support Free and Premium plans.</p>
-      <div class="premium-feature-list">
-        <div><strong>More social pages</strong><span>Organize brands, clients, and campaigns.</span></div>
-        <div><strong>Approval workflows</strong><span>Move work from draft to review and approval.</span></div>
-        <div><strong>Templates and reusable content</strong><span>Save recurring post structures and campaign sets.</span></div>
-        <div><strong>Team collaboration</strong><span>Invite members and assign roles.</span></div>
-      </div>
-      <button id="premiumDoneButton" class="premium-button" type="button">Got it</button>
-    </div>
-  </div>
-
-  <div id="changelogModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="changelogModalTitle">
-    <div class="modal-card changelog-modal-card">
-      <div class="modal-header">
-        <div><p class="eyebrow">Website updates</p><h3 id="changelogModalTitle">Planora changelog</h3></div>
-        <button id="closeChangelogModal" class="icon-button" type="button" aria-label="Close">×</button>
-      </div>
-      <div id="changelogContent" class="changelog-content"></div>
-    </div>
-  </div>
-
-  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
-  <script src="supabase-client.js"></script>
-  <script src="app.js"></script>
-  <script src="auth.js"></script>
+  </footer>
 </body>
 </html>
