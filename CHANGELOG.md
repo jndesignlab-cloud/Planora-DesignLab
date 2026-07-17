@@ -1,3 +1,12 @@
+# Changelog
+
+## 0.1.1 — 2026-07-17
+
+- Fixed password-reset links opening the authenticated planner instead of the recovery form.
+- Added an explicit `mode=recovery` redirect marker for reset emails.
+- Prevented the initial session check from racing ahead of the `PASSWORD_RECOVERY` event.
+- Cleans recovery parameters from the URL after a successful password update.
+
 # Planora Changelog
 
 ## Version 0.1.0 — July 17, 2026

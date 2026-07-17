@@ -53,8 +53,12 @@
     updateVersionLabels();
     setupControls();
     restoreRememberedEmail();
+    recoveryMode = isRecoveryRedirect();
 
     const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      // Set this immediately so the initial getSession() call cannot open the
+      // planner before the recovery event is processed.
+      if (event === "PASSWORD_RECOVERY") recoveryMode = true;
       window.setTimeout(() => processAuthEvent(event, session), 0);
     });
     window.addEventListener("beforeunload", () => authListener.subscription.unsubscribe(), { once: true });
@@ -62,8 +66,14 @@
     try {
       const { data, error } = await supabase.auth.getSession();
       if (error) throw error;
-      if (data.session) await enterApp(data.session);
-      else showAuthScreen("signin");
+
+      if (recoveryMode) {
+        showRecoveryScreen();
+      } else if (data.session) {
+        await enterApp(data.session);
+      } else {
+        showAuthScreen("signin");
+      }
     } catch (error) {
       console.error(error);
       showAuthScreen("signin");
@@ -98,7 +108,11 @@
   }
 
   async function processAuthEvent(event, session) {
-    if (event === "PASSWORD_RECOVERY") {
+    const recoverySessionEvent = recoveryMode
+      && session
+      && ["SIGNED_IN", "INITIAL_SESSION", "PASSWORD_RECOVERY"].includes(event);
+
+    if (event === "PASSWORD_RECOVERY" || recoverySessionEvent) {
       recoveryMode = true;
       lastSessionUserId = session?.user?.id || null;
       await app.stop();
@@ -247,7 +261,9 @@
 
     setAuthBusy(true, els.sendResetButton, "Sending…");
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: getRedirectUrl() });
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: getRedirectUrl("recovery")
+      });
       if (error) throw error;
       showMessage({
         eyebrow: "Reset link sent",
@@ -276,6 +292,7 @@
       const { error } = await supabase.auth.updateUser({ password });
       if (error) throw error;
       recoveryMode = false;
+      clearRecoveryRedirect();
       app.showToast("Password updated successfully.", "success");
       const { data } = await supabase.auth.getSession();
       if (data.session) await enterApp(data.session);
@@ -313,9 +330,35 @@
     els.rememberEmail.checked = true;
   }
 
-  function getRedirectUrl() {
+  function getRedirectUrl(mode = "default") {
     const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-    return isLocal ? `${window.location.origin}${window.location.pathname}` : CONFIG.SITE_URL;
+    const baseUrl = isLocal
+      ? `${window.location.origin}${window.location.pathname}`
+      : CONFIG.SITE_URL;
+    const url = new URL(baseUrl, window.location.origin);
+
+    if (mode === "recovery") {
+      url.searchParams.set("mode", "recovery");
+    }
+
+    return url.toString();
+  }
+
+  function isRecoveryRedirect() {
+    const query = new URLSearchParams(window.location.search);
+    const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+    return query.get("mode") === "recovery"
+      || query.get("type") === "recovery"
+      || hash.get("type") === "recovery";
+  }
+
+  function clearRecoveryRedirect() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("mode");
+    url.searchParams.delete("type");
+    url.searchParams.delete("code");
+    url.hash = "";
+    window.history.replaceState({}, document.title, `${url.pathname}${url.search}`);
   }
 
   function setAuthBusy(value, button, label) {

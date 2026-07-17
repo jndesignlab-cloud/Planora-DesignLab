@@ -1,6 +1,6 @@
 # Planora by DesignLab
 
-**Version 0.1.0**
+**Version 0.1.1**
 
 Planora is the account-based Supabase edition of the DesignLab Social Media Planner. It is a static GitHub Pages frontend backed by Supabase Authentication, PostgreSQL, Row Level Security, and Realtime.
 
@@ -34,7 +34,7 @@ Planora is the account-based Supabase edition of the DesignLab Social Media Plan
 ## Project Structure
 
 ```text
-Planora-v0.1.0/
+Planora-v0.1.1/
 ├── index.html
 ├── style.css
 ├── config.js
@@ -111,7 +111,7 @@ The current release expects the initial schema and security hardening migrations
 
 ## Current Plan Behavior
 
-The database contains `free`, `premium`, and `admin` plan values. Version 0.1.0 displays and reads the account plan, but automated billing and server-enforced usage limits are intentionally reserved for a later migration.
+The database contains `free`, `premium`, and `admin` plan values. Version 0.1.1 displays and reads the account plan, but automated billing and server-enforced usage limits are intentionally reserved for a later migration.
 
 ## Keyboard Shortcuts
 
@@ -121,3 +121,8 @@ The database contains `free`, `premium`, and `admin` plan values. Version 0.1.0 
 - `M` — monthly view
 
 Shortcuts are ignored while typing or while a modal is open.
+
+
+## Password recovery
+
+Password-reset emails return users to Planora with `mode=recovery`. The app keeps the temporary recovery session on the reset form until the new password is saved.

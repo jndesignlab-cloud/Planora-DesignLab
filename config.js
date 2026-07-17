@@ -1,6 +1,6 @@
 window.PLANORA_CONFIG = Object.freeze({
   APP_NAME: "Planora",
-  VERSION: "0.1.0",
+  VERSION: "0.1.1",
 
   SUPABASE_URL: "https://ntggfbcqkkwsvwskdbka.supabase.co",
   SUPABASE_PUBLISHABLE_KEY: "sb_publishable_hFr1ZAOO2OJjv5KJW1wT7A_c5TJLR2U",
@@ -12,6 +12,15 @@ window.PLANORA_CONFIG = Object.freeze({
   AUTO_REFRESH_MS: 60000,
 
   CHANGELOG: [
+    {
+      version: "0.1.1",
+      date: "2026-07-17",
+      changes: [
+        "Fixed password-recovery links opening the planner instead of the new-password form.",
+        "Added an explicit recovery redirect marker and safer auth-event handling.",
+        "Cleaned the recovery URL after a successful password update."
+      ]
+    },
     {
       version: "0.1.0",
       date: "2026-07-17",
